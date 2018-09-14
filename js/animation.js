@@ -17,3 +17,10 @@ $(".animation .frame").css("border-width", Math.round(logoSize / borderWidthFact
 
 $(".animation .letter").css("font-size", Math.round(logoSize * fontSizeFactor) + "px");
 $(".animation .letter").css("margin-left", "-" + Math.round(logoSize / marginFactor) + "px");
+
+$("body").css("overflow", "hidden");
+
+setTimeout(function() {
+    $(".animation").fadeOut(350);
+    $("body").css("overflow", "auto");
+}, 3500);
