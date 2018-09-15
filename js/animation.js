@@ -19,10 +19,10 @@ $(".animation .letter").css("font-size", Math.round(logoSize * fontSizeFactor) +
 $(".animation .letter").css("margin-left", "-" + Math.round(logoSize / marginFactor) + "px");
 
 var interval = setInterval(function() {
-    if(document.fonts.check(Math.round(logoSize * fontSizeFactor) + "px Poppins")) {
+    if(document.fonts.check(Math.round(logoSize * fontSizeFactor) + "px Poppins", "K")) {
         clearInterval(interval);
 
-        setInterval(function() { $(".animation .letter").fadeIn(fadingTime); }, 50);
+        setInterval(function() { $(".animation .letter").fadeIn(fadingTime); }, 100);
 
         setTimeout(function() {
             $(".animation").fadeOut(fadingTime);
