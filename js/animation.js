@@ -18,15 +18,15 @@ $(".animation .frame").css("border-width", Math.round(logoSize / borderWidthFact
 $(".animation .letter").css("font-size", Math.round(logoSize * fontSizeFactor) + "px");
 $(".animation .letter").css("margin-left", "-" + Math.round(logoSize / marginFactor) + "px");
 
-var interval = setInterval(function() {
-    if(document.fonts.check(Math.round(logoSize * fontSizeFactor) + "px Poppins", "K")) {
-        clearInterval(interval);
+var font = new FontFace("Poppins Thin", "url(fonts/Poppins-Thin.ttf)");
 
-        setInterval(function() { $(".animation .letter").fadeIn(fadingTime); }, 100);
+font.load().then(function(loaded_face) {
+    document.fonts.add(loaded_face);
 
-        setTimeout(function() {
-            $(".animation").fadeOut(fadingTime);
-            setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
-        }, 3500);
-    }
-}, 50);
+    $(".animation .letter").fadeIn(fadingTime);
+
+    setTimeout(function() {
+        $(".animation").fadeOut(fadingTime);
+        setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
+    }, 3500);
+});
