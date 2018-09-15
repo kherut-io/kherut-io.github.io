@@ -24,8 +24,8 @@ font.load().then(function(loaded_face) {
 
     $(".animation .letter").fadeIn(fadingTime);
 
-    //setTimeout(function() {
+    setTimeout(function() {
         $(".animation").fadeOut(fadingTime);
-    //    setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
-    //}, 3500);
+        setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
+    }, 2500);
 });
