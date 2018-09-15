@@ -4,7 +4,6 @@ var fontSizeFactor = 1.5;
 var marginFactor = 22.375;
 var borderWidthFactor = 26.43;
 var fadingTime = 350;
-var fontLoaded = false;
 
 ($(window).width() > $(window).height()) ? logoSize = sizeOnScreeen * $(window).height() : logoSize = sizeOnScreeen * $(window).width();
 
@@ -25,8 +24,8 @@ font.load().then(function(loaded_face) {
 
     $(".animation .letter").fadeIn(fadingTime);
 
-    setTimeout(function() {
+    //setTimeout(function() {
         $(".animation").fadeOut(fadingTime);
-        setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
-    }, 3500);
+    //    setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
+    //}, 3500);
 });
