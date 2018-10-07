@@ -28,4 +28,3 @@ font.load().then(function(loaded_face) {
         $(".animation").fadeOut(fadingTime);
         setTimeout(function() { $("body").css("overflow", "auto"); }, fadingTime);
     }, 2500);
-});
