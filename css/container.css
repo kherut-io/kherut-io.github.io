@@ -1,68 +1,93 @@
 .container {
-    background: #18191c;
     width: 100%;
     height: 100%;
     position: absolute;
+    background: url(../img/background_3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
-.container header {
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.container header .title {
-    font-size: 32px;
-    font-family: "Open Sans", sans-serif;
+.container .title {
+    font-size: 116px;
+    font-family: "Movie Letters", monospace;
+    font-weight: lighter;
     letter-spacing: -1px;
-    margin: 20px 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
-.container header .title .white {
+.container .title .white {
     color: white;
+    margin: 0;
 }
 
-.container header .title .light-gray {
-    color: #99aab5;
-    margin-left: 1px;
+.container .title .black {
+    /*margin-left: -6px;*/
+    margin: 0;
+    color: black;
 }
 
-.container header .title .gray {
-    color: #6b8291;
-}
-
-.container .wave {
+.menu {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 105px;
-    width: 100%;
-    background: #1b1c1f;
-    transform: rotate(180deg);
+    bottom: 10px;
+    right: 8px;
+    font-size: 32px;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-weight: normal;
 }
 
-.container .wave:before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 56%;
-    height: 120px;
-    background-color: #18191c;
-    right: -7px;
-    top: 60px;
+.menu a {
+    display: inline-block;
+    padding: 0 12px 8px 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: 1px solid;
+    border-bottom-color: transparent;
+    letter-spacing: 1px;
 }
 
-.container .wave:after {
-    content: "";
-    display: block;
+.menu a:hover {
+    border-bottom-color: white;
+}
+
+@media only screen and (max-width: 450px) {
+    .menu a {
+        font-size: 0;
+        letter-spacing: 0;
+    }
+    
+    .menu a::first-letter {
+        font-size: 22px;
+    }
+}
+
+.lang_menu {
     position: absolute;
-    border-radius: 100% 50%;
-    width: 50%;
-    height: 100px;
-    background: #1b1c1f;
-    left: 0;
-    top: 54px;
+    bottom: 12px;
+    left: 20px;
+    width: 0;
+    word-break: break-all;
+}
+
+.lang_menu a {
+    display: inline-table;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: "Roboto Mono", monospace;
+    word-break: keep-all;
+    letter-spacing: 1px;
+    padding: 6px 0 6px 0;
+    border-bottom: solid 1px white;
+}
+
+.lang_menu a:last-child {
+    border-bottom: none;
 }
