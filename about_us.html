@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kherut.io</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="theme-color" content="#080a09">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/animation.css" rel="stylesheet">
+        <link href="css/container.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--<div class="animation">
+            <div class="logo">
+                <div class="frame"></div>
+                <span class="letter">K</span>
+            </div>
+        </div>
+        
+        <script src="js/animation.js"></script>-->
+        
+        <script>
+            $(window).on("resize load", function() {
+                //console.log($(".box").offset().top + "/" + $(".box").offset().left);
+                
+                var offset = $(".box").offset();
+                var t = offset.top;
+                var l = offset.left;
+                var b = $(window).height() - $(".box").height() - t;
+                var r = $(window).width() - $(".box").width() - l;
+                if(b < 80) {
+                    var css = '<style id="pseudo">.box::before, .box::after { display: none !important; } .box { transform: translate(-50%, 0%); left: 50%; width: 75%; top: 20px; }</style>';
+                    document.head.insertAdjacentHTML('beforeEnd', css);
+                }
+                else $('#pseudo').remove();
+                if(t - 40 < 140) $($(".title")).hide();
+                else $($(".title")).show();
+            });
+        </script>
+        
+        <div class="container">
+            <div class="menu">
+                <a href="index.html">home</a>|<a href="#">about us</a>|<a href="#">p<span class="last_letter">o</span>rtfolio</a>|<a href="#">p<span class="last_letter">r</span>oducts</a>|<a href="#">contact</a>
+            </div>
+            <input type="checkbox" id="lang_control" />
+            <label class="lang_active" for="lang_control">en</label>
+            <div class="lang_menu">
+                <a href="#">de</a>
+                <a href="#">es</a>
+                <a href="#">pl</a>
+            </div>
+            <a href="index.html">
+                <h1 class="title top">
+                    <span class="white">kherut</span><span class="black">io</span>
+                </h1>
+            </a>
+            <div class="box">
+                <h1 class="site_title">about us</h1>
+                <p class="site_content">Kherut (Hebrew: חרות‎, lit. freedom) is a Polish startup company. We code websites and write software.<br /><br />Oh, and we love minimalism.</p>
+            </div>
+        </div>
+    </body>
+</html>
