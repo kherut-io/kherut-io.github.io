@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kherut.io</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="theme-color" content="#222222">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/animation.css" rel="stylesheet">
+        <link href="css/container.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="animation">
+            <div class="logo">
+                <div class="frame"></div>
+                <span class="letter">K</span>
+            </div>
+        </div>
+        
+        <script src="js/animation.js"></script>
+        
+        <script>
+            $("window").on("resize", function() {
+                console.log($("window").width() + "x" + $("window").height());
+            });
+        </script>
+        
+        <div class="container">
+            <div class="menu">
+                <a href="index.html">home</a>|<a href="about_us.html">about us</a>|<a href="#">p<span class="last_letter">o</span>rtfolio</a>|<a href="#">p<span class="last_letter">r</span>oducts</a>|<a href="contact.html">contact</a>
+            </div>
+            <input type="checkbox" id="lang_control" />
+            <label class="lang_active" for="lang_control">en</label>
+            <div class="lang_menu">
+                <a href="#">de</a>
+                <a href="#">es</a>
+                <a href="#">pl</a>
+            </div>
+            <h1 class="title">
+                <span class="white">kherut</span><span class="black">io</span>
+            </h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../fonts/RobotoMono-Light.ttf");
+}
+
+@font-face {
+    font-family: "Movie Letters";
+    src: url("../fonts/MovLette.ttf");
+}

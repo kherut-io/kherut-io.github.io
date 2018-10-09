@@ -1,0 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.animation {
+    z-index: 97;
+}
+
+.container {
+    z-index: 1;
+}
