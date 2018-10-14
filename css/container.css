@@ -222,3 +222,30 @@
     color: white;
     text-decoration: underline;
 }
+
+.box .product {
+    text-decoration: none;
+}
+
+.box .product div {
+    border: solid 1px white;
+    padding: 10px 0 0 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
+}
+
+.box .product div:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.box .product div img {
+    width: 60px;
+}
+
+.box .product div h1 {
+    font-weight: normal;
+    font-family: "Roboto Mono", monospace;
+    font-size: 22px;
+    color: white;
+}
