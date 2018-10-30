@@ -9,8 +9,7 @@
         <link href="css/header.css" rel="stylesheet" type="text/css" />
         <link href="css/fonts.css" rel="stylesheet" type="text/css" />
         <link href="css/flag-icon.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/solid.css" integrity="sha384-uKQOWcYZKOuKmpYpvT0xCFAs/wE157X5Ua3H5onoRAOCNkJAMX/6QF0iXGGQV9cP" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/fontawesome.css" integrity="sha384-HU5rcgG/yUrsDGWsVACclYdzdCcn5yU8V/3V84zSrPDHwZEdjykadlgI6RHrxGrJ" crossorigin="anonymous">
+        <link href="css/all.min.css" rel="stylesheet" type="text/css" />
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
@@ -22,12 +21,23 @@
                 <h1>Kherut</h1><h1>·</h1><h1>io</h1>
             </span>
             <!--FONT AWESOME DISCORD AND GITHUB ICON-->
-            <div class="flag flag-icon-background flag-icon-pl" title="Polish" id="pl"></div>
+            <a href="https://github.com/kherut-io/" target="_blank" class="social"><i class="fab fa-github"></i></a>
+            <a href="https://discord.gg/xKmfGBW" target="_blank" class="social"><i class="fab fa-discord"></i></a>
+            <div class="flag-active flag flag-icon-background flag-icon-pl" title="Polski" id="pl"></div>
+            <ul class="available-languages">
+                <li><div class="flag flag-icon-background flag-icon-gb" title="English" id="gb"></div></li>
+                <li><div class="flag flag-icon-background flag-icon-es" title="Español" id="es"></div></li>
+            </ul>
             <nav>
                 <h1>O nas</h1>
                 <h1>Realizacje</h1>
                 <h1>Kontakt</h1>
             </nav>
         </header>
+        <script>
+            $("header .flag-active").on("click", function() {
+                $(".available-languages").fadeToggle(150);
+            });
+        </script>
     </body>
 </html>

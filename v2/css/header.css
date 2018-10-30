@@ -10,7 +10,7 @@ header {
 }
 
 header .logo {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 80px;
     padding: 0;
 }
 
@@ -53,9 +53,53 @@ header nav * {
 }
 
 header .flag {
-    margin: 18px 15px 0 15px;
+    margin: 18px 15px 0 25px;
     height: 16px;
     width: 22px;
     float: right;
     line-height: 60px;
+    cursor: pointer;
+}
+
+header a.social {
+    padding: 0;
+    margin: 0;
+    margin: 0 10px;
+    float: right;
+    line-height: 60px;
+}
+
+header a.social i {
+    font-size: 18px;
+    color: #f6f6f6;
+}
+
+header a.social:first-of-type {
+    margin-right: 80px;
+}
+
+header .available-languages {
+    position: absolute;
+    top: 18px;
+    right: 158px;
+    padding: 0;
+    display: none;
+}
+
+header .available-languages li {
+    list-style-type: none;
+    margin: 0;
+}
+
+header .available-languages li .flag {
+    margin: 9px 0 0 0;
+}
+
+header .available-languages li .flag::before {
+    content: "";
+    display: block;
+    margin: -5px auto;
+    width: 16px;
+    height: 1px;
+    background: white;
 }
