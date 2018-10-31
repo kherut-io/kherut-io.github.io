@@ -12,6 +12,8 @@
         <link href="css/fonts.css" rel="stylesheet" type="text/css" />
         <link href="css/flag-icon.min.css" rel="stylesheet" type="text/css" />
         <link href="css/all.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/flat.css" rel="stylesheet" type="text/css" />
+        <link href="css/home.css" rel="stylesheet" type="text/css" />
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
@@ -36,13 +38,18 @@
                 <li><div class="flag flag-icon-background flag-icon-es" title="Español" id="es"></div></li>
             </ul>
             <nav>
-                <a><h1>O nas</h1></a>
+                <a href="#"><h1>O nas</h1></a>
                 <a href="projects.html"><h1>Realizacje</h1></a>
-                <a><h1>Kontakt</h1></a>
+                <a href="#"><h1>Kontakt</h1></a>
             </nav>
         </header>
         <section>
-            <h1>Strona główna</h1>
+            <div class="container">
+                <h1>Kherut to wolność.<br />Pod każdym względem.</h1>
+                <p>Rozwiązania dla oświaty, IoT, aplikacje mobilne<br />i wiele, wiele więcej. Wyznaczamy zespołowo<br />prawdziwą wolność w programowaniu i projek-<br />towaniu, otwierając swoje umysły na innowacje.</p>
+                <a href="#" class="flat-button">KIM JESTEŚMY?</a>
+                <a href="#" class="flat-button flat-button-transparent">KONTAKT</a>
+            </div>
         </section>
         <script>
             $("header .flag-active").on("click", function() {

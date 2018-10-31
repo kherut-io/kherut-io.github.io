@@ -10,14 +10,14 @@ header {
 }
 
 header .logo {
-    margin: 0 0 0 80px;
+    margin: 0 0 0 140px;
     padding: 0;
 }
 
 header .logo * {
     margin: 0;
     display: inline-block;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", monospace;
     font-weight: lighter;
     line-height: 60px;
 }
@@ -81,13 +81,13 @@ header a.social i {
 }
 
 header a.social:first-of-type {
-    margin-right: 80px;
+    margin-right: 140px;
 }
 
 header .available-languages {
     position: absolute;
     top: 18px;
-    right: 158px;
+    right: 218px;
     padding: 0;
     display: none;
 }
@@ -98,13 +98,13 @@ header .available-languages li {
 }
 
 header .available-languages li .flag {
-    margin: 9px 0 0 0;
+    margin: 15px 0 0 0;
 }
 
 header .available-languages li .flag::before {
     content: "";
     display: block;
-    margin: -5px auto;
+    margin: -8px auto;
     width: 16px;
     height: 1px;
     background: white;

@@ -1,0 +1,28 @@
+.flat-button {
+    display: inline-block;
+    background: #486171;
+    padding: 12px 30px;
+    border-radius: 6px;
+    border-bottom: solid 2px #364854;
+    text-decoration: none;
+    font-family: "Comfortaa", monospace;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fafafa;
+    transition: 0.1s all ease-in-out;
+}
+
+.flat-button:hover {
+    background: #5a798d;
+    border-bottom-color: #486171;
+}
+
+.flat-button-transparent {
+    background: rgba(0, 0, 0, 0);
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
+}
+
+.flat-button-transparent:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}

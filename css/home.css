@@ -1,0 +1,28 @@
+section .container {
+    font-family: "Comfortaa", monospace;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section .container h1 {
+    color: #fefefe;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+section .container p {
+    font-size: 17px;
+    color: #a9a9a9;
+    line-height: 28px;
+}
+
+section .container .flat-button {
+    margin-top: 20px;
+}
+
+section .container .flat-button-transparent {
+    color: #486171;
+    margin-left: 20px;
+}
