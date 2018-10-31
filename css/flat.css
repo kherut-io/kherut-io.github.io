@@ -5,11 +5,11 @@
     border-radius: 6px;
     border-bottom: solid 2px #364854;
     text-decoration: none;
-    font-family: "Comfortaa", monospace;
+    font-family: "Poppins", monospace;
     font-size: 14px;
     font-weight: bolder;
     color: #fafafa;
-    transition: 0.1s all ease-in-out;
+    transition: 0.225s all ease-in-out;
 }
 
 .flat-button:hover {
