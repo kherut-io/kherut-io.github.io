@@ -1,0 +1,83 @@
+.nav_control {
+    display: none;
+    position: absolute;
+    right: 22px;
+    top: 13px;
+    height: 32px;
+    width: 32px;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav_control span {
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #f6f6f6;
+    transition: 0.5s all ease-in-out;
+}
+
+.nav_control.active span {
+    background: black;
+}
+
+.nav_control span:nth-child(1) {
+    top: 3px;
+}
+
+.nav_control span:nth-child(2) {
+    top: 15px;
+}
+
+.nav_control span:nth-child(3) {
+    bottom: 3px;
+}
+
+.mobile_nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s all ease-in-out;
+    text-align: center;
+}
+
+.mobile_nav nav {
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile_nav nav * {
+    color: black !important;
+    display: block;
+    line-height: 40px;
+    letter-spacing: 6px;
+}
+
+.mobile_nav .social_bar * {
+    color: black;
+    position: absolute;
+    bottom: 45px;
+}
+
+.mobile_nav .social_bar .social:first-child {
+    margin: auto;
+}
+
+.mobile_nav .social_bar .social:nth-child(2) {
+    margin-left: 45px;
+}
+
+.mobile_nav .social_bar .flag-active {
+    bottom: 92px;
+    left: calc(50% - 62px);
+}

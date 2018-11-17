@@ -1,0 +1,21 @@
+@media only screen and (max-width: 900px) {
+    header .logo {
+        margin-left: 40px !important;
+    }
+
+    header a.social:first-of-type {
+        margin-right: 40px !important;
+    }
+
+    header nav a h1 {
+        margin: 0 8px !important;
+    }
+
+    header .flag-active {
+        margin-left: 10px !important;
+    }
+
+    header .available-languages {
+        right: 113px !important;
+    }
+}

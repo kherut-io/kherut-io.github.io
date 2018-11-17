@@ -1,0 +1,17 @@
+@media only screen and (max-width: 650px) {
+    header .logo {
+        margin-left: 25px !important;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .nav_control {
+        display: inline-block;
+    }
+
+    section {
+        display: none;
+    }
+}

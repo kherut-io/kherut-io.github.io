@@ -12,6 +12,9 @@
         <link href="css/fonts.css" rel="stylesheet" type="text/css" />
         <link href="css/flag-icon.min.css" rel="stylesheet" type="text/css" />
         <link href="css/all.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/nav_control.css" rel="stylesheet" type="text/css" />
+        <link href="css/width-900.css" rel="stylesheet" type="text/css" />
+        <link href="css/width-650.css" rel="stylesheet" type="text/css" />
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
@@ -27,19 +30,38 @@
             <span class="logo">
                 <a href="index.html"><h1>Kherut</h1><h1>·</h1><h1>io</h1></a>
             </span>
-            <!--FONT AWESOME DISCORD AND GITHUB ICON-->
-            <a href="https://github.com/kherut-io/" target="_blank" class="social"><i class="fab fa-github"></i></a>
-            <a href="https://discord.gg/xKmfGBW" target="_blank" class="social"><i class="fab fa-discord"></i></a>
-            <div class="flag-active flag flag-icon-background flag-icon-pl" title="Polski" id="pl"></div>
-            <ul class="available-languages">
-                <li><div class="flag flag-icon-background flag-icon-gb" title="English" id="gb"></div></li>
-                <li><div class="flag flag-icon-background flag-icon-es" title="Español" id="es"></div></li>
-            </ul>
-            <nav>
-                <a href="index.html"><h1>O nas</h1></a>
-                <a href="projects.html"><h1>Realizacje</h1></a>
-                <a><h1>Kontakt</h1></a>
-            </nav>
+            <div class="nav_control">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile_nav">
+                <nav>
+                    <a href="index.html"><h1>O nas</h1></a>
+                    <a href="projects.html"><h1>Realizacje</h1></a>
+                    <a><h1>Kontakt</h1></a>
+                </nav>
+                <span class="social_bar">
+                    <a href="https://github.com/kherut-io/" target="_blank" class="social"><i class="fab fa-github"></i></a>
+                    <a href="https://discord.gg/xKmfGBW" target="_blank" class="social"><i class="fab fa-discord"></i></a>
+                    <div class="flag-active flag flag-icon-background flag-icon-pl" title="Polski" id="pl"></div>
+                </span>
+            </div>
+            <span class="navigation">
+                <!--FONT AWESOME DISCORD AND GITHUB ICON-->
+                <a href="https://github.com/kherut-io/" target="_blank" class="social"><i class="fab fa-github"></i></a>
+                <a href="https://discord.gg/xKmfGBW" target="_blank" class="social"><i class="fab fa-discord"></i></a>
+                <div class="flag-active flag flag-icon-background flag-icon-pl" title="Polski" id="pl"></div>
+                <ul class="available-languages">
+                    <li><div class="flag flag-icon-background flag-icon-gb" title="English" id="gb"></div></li>
+                    <li><div class="flag flag-icon-background flag-icon-es" title="Español" id="es"></div></li>
+                </ul>
+                <nav>
+                    <a href="index.html"><h1>O nas</h1></a>
+                    <a href="projects.html"><h1>Realizacje</h1></a>
+                    <a><h1>Kontakt</h1></a>
+                </nav>
+            </span>
         </header>
         <section>
             <h1>Realizacje</h1>
@@ -47,6 +69,18 @@
         <script>
             $("header .flag-active").on("click", function() {
                 $(".available-languages").fadeToggle(150);
+            });
+
+            $(".nav_control").on("click", function() {
+                if($(".mobile_nav").width() == 0) {
+                    $(".mobile_nav").css("width", "100%");
+                    $(".nav_control").addClass("active");
+                }
+
+                else {
+                    $(".mobile_nav").css("width", "0");
+                    $(".nav_control").removeClass("active");
+                }
             });
         </script>
     </body>
