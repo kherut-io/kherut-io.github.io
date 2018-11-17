@@ -58,15 +58,6 @@ header nav * {
     font-size: 20px;
 }
 
-header .flag {
-    margin: 0 10px 0 25px;
-    height: 60px;
-    width: 22px;
-    float: right;
-    line-height: 60px;
-    cursor: pointer;
-}
-
 header a.social {
     padding: 0;
     margin: 3px 10px 0 10px;
@@ -83,10 +74,18 @@ header a.social:first-of-type {
     margin-right: 140px;
 }
 
+header .flag {
+    margin: 23px 10px 0 25px;
+    height: 16px;
+    width: 22px;
+    float: right;
+    cursor: pointer;
+}
+
 header .available-languages {
     position: absolute;
-    top: 18px;
-    right: 218px;
+    top: 23px;
+    right: 213px;
     padding: 0;
     display: none;
 }
@@ -103,7 +102,8 @@ header .available-languages li .flag {
 header .available-languages li .flag::before {
     content: "";
     display: block;
-    margin: -8px auto;
+    margin: 0px auto;
+    margin-top: -8px;
     width: 16px;
     height: 1px;
     background: white;
