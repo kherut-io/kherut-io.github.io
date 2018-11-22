@@ -12,6 +12,18 @@
     }
 
     section {
+        top: calc(50% + 20px);
+    }
+
+    section .container h1 {
+        font-size: 24px;
+    }
+
+    section .container p.wide {
         display: none;
+    }
+
+    section .container p.thin {
+        display: block;
     }
 }

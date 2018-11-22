@@ -15,6 +15,7 @@
         <link href="css/flat.css" rel="stylesheet" type="text/css" />
         <link href="css/home.css" rel="stylesheet" type="text/css" />
         <link href="css/nav_control.css" rel="stylesheet" type="text/css" />
+        <link href="css/width-1050.css" rel="stylesheet" type="text/css" />
         <link href="css/width-900.css" rel="stylesheet" type="text/css" />
         <link href="css/width-650.css" rel="stylesheet" type="text/css" />
         
@@ -46,6 +47,7 @@
                 <span class="social_bar">
                     <a href="https://github.com/kherut-io/" target="_blank" class="social"><i class="fab fa-github"></i></a>
                     <a href="https://discord.gg/xKmfGBW" target="_blank" class="social"><i class="fab fa-discord"></i></a>
+                    <a href="https://linkedin.com/kherut-io" target="_blank" class="social"><i class="fab fa-linkedin"></i></a>
                     <div class="flag-active flag flag-icon-background flag-icon-pl" title="Polski" id="pl"></div>
                 </span>
             </div>
@@ -68,26 +70,39 @@
         <section>
             <div class="container">
                 <h1>Kherut to wolność.<br />Pod każdym względem.</h1>
-                <p>Rozwiązania dla oświaty, IoT, aplikacje mobilne<br />i wiele, wiele więcej. Wyznaczamy zespołowo<br />prawdziwą wolność w programowaniu i projek-<br />towaniu, otwierając swoje umysły na innowacje.</p>
+                <p class="wide">Rozwiązania dla oświaty, IoT, aplikacje mobilne<br />i wiele, wiele więcej. Wyznaczamy zespołowo<br />prawdziwą wolność w programowaniu i projek-<br />towaniu, otwierając swoje umysły na innowacje.</p>
+                <p class="thin">Rozwiązania dla oświaty, IoT,<br />aplikacje mobilne i wiele, wiele<br />więcej. Wyznaczamy zespołowo<br />prawdziwą wolność w progra-<br />mowaniu i projektowaniu, otwierając<br />swoje umysły na innowacje.</p>
                 <a href="#" class="flat-button">KIM JESTEŚMY?</a>
                 <a href="#" class="flat-button flat-button-transparent">KONTAKT</a>
             </div>
         </section>
+        <img class="side-img" alt="Kherut.io" src="img/sample.png" />
         <script>
             $("header .flag-active").on("click", function() {
                 $(".available-languages").fadeToggle(150);
             });
 
-            $(".nav_control").on("click", function() {
-                if($(".mobile_nav").width() == 0) {
-                    $(".mobile_nav").css("width", "100%");
-                    $(".nav_control").addClass("active");
-                }
+            function openSideNav() {
+                $(".mobile_nav").css("width", "100%");
+                $(".nav_control").addClass("active");
+            }
 
-                else {
-                    $(".mobile_nav").css("width", "0");
-                    $(".nav_control").removeClass("active");
-                }
+            function closeSideNav() {
+                $(".mobile_nav").css("width", "0");
+                $(".nav_control").removeClass("active");
+            }
+
+            $(".nav_control").on("click", function() {
+                if($(".mobile_nav").width() == 0)
+                    openSideNav();
+
+                else
+                    closeSideNav();
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 650)
+                    closeSideNav();
             });
         </script>
     </body>

@@ -1,9 +1,10 @@
 section .container {
     font-family: "Poppins", monospace;
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+}
+
+section .container * {
+    white-space: nowrap;
 }
 
 section .container h1 {
@@ -18,6 +19,10 @@ section .container p {
     line-height: 28px;
 }
 
+section .container p.thin {
+    display: none;
+}
+
 section .container .flat-button {
     margin-top: 20px;
 }
@@ -25,4 +30,13 @@ section .container .flat-button {
 section .container .flat-button-transparent {
     color: #486171;
     margin-left: 20px;
+}
+
+.side-img {
+    width: 275px;
+    z-index: 2;
+    position: absolute;
+    right: 140px;
+    top: 50%;
+    transform: translateY(-50%);
 }
