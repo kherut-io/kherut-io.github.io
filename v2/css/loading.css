@@ -7,18 +7,15 @@
     width: 100%;
     height: 100%;
     background: #111111;
+    transition: 0.3s all ease-in-out;
+}
+
+.loading.hidden {
+    opacity: 0;
 }
 
 .loading .outline-logo {
-    padding: 46px 78px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    border: none;
 }
 
 .loading .outline-logo .left {
@@ -57,6 +54,6 @@
     top: -3px;
 }
 
-.loading .logo {
+.logo {
     height: 97px;
 }

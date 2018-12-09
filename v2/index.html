@@ -6,25 +6,46 @@
         <title>Kherut.io</title>
 
         <!--CSS-->
-        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/background.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/container.css">
         <link rel="stylesheet" href="css/loading.css">
 
         <!--JS-->
+        <script type="text/javascript" src="js/fit.js"></script>
         <script type="text/javascript" src="js/load.js"></script>
+        <script type="text/javascript" src="js/background.js"></script>
     </head>
     <body>
+        <div class="background"></div>
+        <div class="outline-logo">
+            <img src="img/kherut-io.svg" class="logo" alt="Kherut.io Logo">
+        </div>
+        <div class="menu">
+            <div class="side">
+                <a href="#">strona główna</a>
+                <a href="#">o nas</a>
+            </div>
+            <div class="side">
+                <a href="#">realizacje</a>
+                <a href="#">kontakt</a>
+            </div>
+        </div>
         <div class="loading">
             <div class="outline-logo">
                 <span class="top"></span>
                 <span class="left"></span>
-                <img src="img/kherut-io.svg" class="logo" alt="Kherut.io Logo">
+                <img src="img/kherut-io.svg" class="logo" alt="Kherut.io Logo" id="loading-logo">
                 <span class="bottom"></span>
                 <span class="right"></span>
             </div>
         </div>
     </body>
     <script>
-        var i = 0;
-        var interval = setInterval(function() { drawLines(i); i++; if(i == 101) clearInterval(interval); }, 50);
+        document.getElementById("loading-logo").onclick = function() {
+            document.getElementsByClassName("loading")[0].style.display = "none";
+        };
+
+        setBackground();
     </script>
 </html>

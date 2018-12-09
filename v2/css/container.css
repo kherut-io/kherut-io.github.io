@@ -1,0 +1,86 @@
+.outline-logo {
+    padding: 46px 78px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 3px white solid;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menu a {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 200;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+}
+
+.menu .side {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.menu .side:first-child {
+    left: 31px;
+}
+
+.menu .side:last-child {
+    right: 31px;
+    text-align: right;
+}
+
+.menu .side a::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 35px;
+    position: absolute;
+    margin-top: 1px;
+    background: white;
+}
+
+.menu .side a::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 31px;
+    position: absolute;
+    margin-top: 1px;
+    border-bottom: solid 2px white;
+    border-top: solid 2px white;
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.menu .side:first-child a::before {
+    left: -13px;
+}
+
+.menu .side:last-child a::before {
+    right: -13px;
+}
+
+.menu .side:first-child a::after {
+    left: -13px;
+    margin-top: -31px;
+}
+
+.menu .side:last-child a::after {
+    right: -13px;
+    margin-top: -31px;
+}
+
+.menu .side a:hover::after {
+    opacity: 1;
+}
