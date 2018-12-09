@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kherut.io</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/loading.css">
+
+        <!--JS-->
+        <script type="text/javascript" src="js/load.js"></script>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="outline-logo">
+                <span class="top"></span>
+                <span class="left"></span>
+                <img src="img/kherut-io.svg" class="logo" alt="Kherut.io Logo">
+                <span class="bottom"></span>
+                <span class="right"></span>
+            </div>
+        </div>
+    </body>
+    <script>
+        var i = 0;
+        var interval = setInterval(function() { drawLines(i); i++; if(i == 101) clearInterval(interval); }, 50);
+    </script>
+</html>

@@ -1,0 +1,62 @@
+.loading {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+}
+
+.loading .outline-logo {
+    padding: 46px 78px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.loading .outline-logo .left {
+    width: 3px;
+    height: 0px;
+    background: white;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+}
+
+.loading .outline-logo .bottom {
+    width: 0px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: -3px;
+    top: 199px;
+}
+
+.loading .outline-logo .right {
+    width: 3px;
+    height: 0px;
+    background: white;
+    position: absolute;
+    right: -9px;
+    bottom: -9px;
+}
+
+.loading .outline-logo .top {
+    width: 0px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    right: -9px;
+    top: -3px;
+}
+
+.loading .logo {
+    height: 97px;
+}
