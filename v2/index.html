@@ -43,11 +43,13 @@
     </body>
     <script>
         document.getElementById("loading-logo").onclick = function() {
-            document.getElementsByClassName("loading")[0].style.display = "none";
+            window.location.replace(window.location.href + "?noloading");
         };
 
-        var i = 0;
-        var interval = setInterval(function() { drawLines(i); i++; if(i >= 101) clearInterval(interval); }, 50);
+        var noloading = (window.location.href.split("?").length == 2);
+
+        if(!noloading)
+            document.getElementsByClassName("loading")[0].style.display = "block";
 
         setBackground();
     </script>

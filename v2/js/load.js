@@ -22,7 +22,9 @@ Image.prototype.load = function(url){
 
     xmlHTTP.onprogress = function(e) {
         thisImg.completedPercentage = parseInt((e.loaded / e.total) * 100);
-        drawLines(thisImg.completedPercentage);
+
+        if(!noloading)
+            drawLines(thisImg.completedPercentage);
     };
 
     xmlHTTP.onloadstart = function() {
