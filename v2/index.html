@@ -23,7 +23,7 @@
         </div>
         <div class="menu">
             <div class="side">
-                <a href="#">strona główna</a>
+                <a href="#">strona&nbsp;główna</a>
                 <a href="#">o nas</a>
             </div>
             <div class="side">
@@ -45,6 +45,9 @@
         document.getElementById("loading-logo").onclick = function() {
             document.getElementsByClassName("loading")[0].style.display = "none";
         };
+
+        var i = 0;
+        var interval = setInterval(function() { drawLines(i); i++; if(i >= 101) clearInterval(interval); }, 50);
 
         setBackground();
     </script>

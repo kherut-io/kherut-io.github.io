@@ -33,7 +33,7 @@
     background: white;
     position: absolute;
     left: -3px;
-    top: 199px;
+    bottom: -9px;
 }
 
 .loading .outline-logo .right {
@@ -54,6 +54,6 @@
     top: -3px;
 }
 
-.logo {
-    height: 97px;
+@media only screen and (max-width: 900px) {
+
 }
