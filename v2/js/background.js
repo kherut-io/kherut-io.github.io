@@ -1,6 +1,4 @@
-function setBackground() {
-    var path = "img/backgrounds/danakil.jpg";
-
+function setBackground(path) {
     if(!noloading) {
         var img = new Image();
         img.load(path);

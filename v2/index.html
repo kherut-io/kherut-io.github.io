@@ -59,20 +59,14 @@
         function openSideNav() {
             document.getElementsByClassName("menu")[0].style.width = "100%";
             document.getElementsByClassName("button-menu")[0].classList.add("active");
-
-            console.log("Open");
         }
 
         function closeSideNav() {
             document.getElementsByClassName("menu")[0].style.width = "0";
             document.getElementsByClassName("button-menu")[0].classList.remove("active");
-
-            console.log("Close");
         }
 
         document.getElementsByClassName("button-menu")[0].onclick = function() {
-            console.log(document.getElementsByClassName("menu")[0].clientWidth);
-
             if(document.getElementsByClassName("menu")[0].clientWidth == 0)
                 openSideNav();
             else
@@ -84,6 +78,11 @@
                 closeSideNav();
         };
 
-        setBackground();
+        var random_boolean = Math.random() >= 0.5;
+
+        if(random_boolean)
+            setBackground("img/backgrounds/IMG_9267.JPG");
+        else
+            setBackground("img/backgrounds/IMG_8375.JPG");
     </script>
 </html>

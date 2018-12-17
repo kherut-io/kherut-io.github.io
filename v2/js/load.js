@@ -9,6 +9,7 @@ Image.prototype.load = function(url){
         var blob = new Blob([this.response]);
         thisImg.src = window.URL.createObjectURL(blob);
 
+        document.getElementsByClassName("background")[0].innerHTML = "";
         document.getElementsByClassName("background")[0].appendChild(thisImg);
         var watching = fit(thisImg, document.getElementsByClassName("background")[0], { hAlign: fit.CENTER, vAlign: fit.CENTER, cover: true, apply: true, watch: true });
 
