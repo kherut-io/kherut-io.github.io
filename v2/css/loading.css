@@ -9,6 +9,7 @@
     background: #111111;
     transition: 0.3s all ease-in-out;
     display: none;
+    z-index: 99;
 }
 
 .loading.hidden {

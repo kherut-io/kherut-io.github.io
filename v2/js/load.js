@@ -13,10 +13,45 @@ Image.prototype.load = function(url){
         var watching = fit(thisImg, document.getElementsByClassName("background")[0], { hAlign: fit.CENTER, vAlign: fit.CENTER, cover: true, apply: true, watch: true });
 
         setTimeout(function() {
-            window.dispatchEvent(new Event('resize'));
-            document.getElementsByClassName("loading")[0].classList.add("hidden");
+            var colorSumR = 0;
+            var colorSumG = 0;
+            var colorSumB = 0;
 
-            setTimeout(function() { document.getElementsByClassName("loading")[0].style.display = "none"; }, 300);
+            var canvas = document.createElement("canvas");
+            canvas.width = thisImg.width;
+            canvas.height = thisImg.height;
+
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(thisImg, 0, 0);
+
+            var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+            var data = imageData.data;
+            var r,g,b;
+
+            for(var x = 0, len = data.length; x < len; x+=4) {
+                r = data[x];
+                g = data[x+1];
+                b = data[x+2];
+
+                colorSumR += r;
+                colorSumG += g;
+                colorSumB += b;
+            }
+
+            r = Math.floor(colorSumR / (thisImg.width * thisImg.height));
+            g = Math.floor(colorSumG / (thisImg.width * thisImg.height));
+            b = Math.floor(colorSumB / (thisImg.width * thisImg.height));
+
+            document.getElementsByClassName("background")[0].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            document.getElementsByClassName("menu")[0].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+            setTimeout(function() {
+                window.dispatchEvent(new Event('resize'));
+                document.getElementsByClassName("loading")[0].classList.add("hidden");
+
+                setTimeout(function() { document.getElementsByClassName("loading")[0].style.display = "none"; }, 300);
+            }, 250);
         }, 250);
     };
 
