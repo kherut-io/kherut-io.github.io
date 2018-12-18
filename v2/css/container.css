@@ -209,15 +209,25 @@
     .menu .side {
         margin: 0;
         padding: 0;
-        transform: translateX(-50%);
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        left: unset;
+        top: unset;
     }
 
     .menu .side:first-child {
-        bottom: 50%;
+        bottom: 20px;
+        top: unset;
     }
 
     .menu .side:last-child {
-        top: 50%;
+        top: -35px;
+        bottom: unset;
+    }
+
+    .menu .side a::before, .menu .side a::after {
+        display: none;
     }
 }
 

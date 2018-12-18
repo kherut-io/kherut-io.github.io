@@ -78,11 +78,13 @@
                 closeSideNav();
         };
 
-        var random_boolean = Math.random() >= 0.5;
+        var random_boolean = Math.random();
 
-        if(random_boolean)
-            setBackground("img/backgrounds/IMG_9267.JPG");
+        if(random_boolean <= (1/3))
+            setBackground("img/backgrounds/DARK_IMG_9015.JPG");
+        else if(random_boolean <= (2/3))
+            setBackground("img/backgrounds/DARK_IMG_9488.JPG");
         else
-            setBackground("img/backgrounds/IMG_8375.JPG");
+            setBackground("img/backgrounds/DARK_IMG_9938.JPG");
     </script>
 </html>
